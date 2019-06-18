@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+	var c = this;
+	
+
+	
+	
+	$scope.selectedCategoryModel = [];
+	$scope.categories = [ 
+		{id: 1, label: "Software"}, 
+		{id: 2, label: "Hardware"}, 
+		{id: 3, label: "Network"} 
+	];
+
+	
+	
+	$scope.eventHandler = {
+		onSelectionChanged: function(row) {
+			c.selectedCategories = [];
+			$scope.selectedCategoryModel.forEach(function(element) {
+				var selectedCategory = $scope.categories.find(function(category) {
+            return category.id == element.id;
+				});
+				c.selectedCategories.push(selectedCategory.label); 
+				console.log(c.selectedCategories);
+				var dataObject = function(row) {
+					var right = false;
+					if($scope.selectedCategoryModel){
+						Object.keys($scope.selectedCategoryModel).forEach(function(val){
+							if(row.notes_category == val.label)
+								right = true;
+						})
+					}
+					else
+						
+					return right;
+					console.log(dataObject);
+				};
+				var myArray = c.selectedCategories;
+				for (var i = 0; i < myArray.length; i++) {
+					console.log(myArray[i]);
+				}
+			});
+		}
+	};
+	//console.log(c.data.notes)
+}
+
+	
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>input, button, select, textarea {
+   font-family: inherit;
+   font-size: inherit;
+    line-height: inherit;
+   margin: 16px;
+  
+  .btn-group, .btn-group-vertical {
+   position: relative;
+    display: inline-block;
+    vertical-align: middle;
+   margin-left: 254px;
+    
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>simple_list_with_dropdown_search</id>
+        <internal>false</internal>
+        <link/>
+        <name>Simple list with dropdown search</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[  (function() {
+    //create an array to populate without notes
+     data.notes = [];
+		var noteGR = new GlideRecord('x_snc_createnotes_note');
+		//noteGR.addQuery('user', gs.getUser().getID());
+     noteGR.orderByDesc('sys_created_on');
+     noteGR.query();
+     while (noteGR.next()) {
+     var noteObj = {};
+    //use service portal helper method to get some display values
+     $sp.getRecordDisplayValues(noteObj, noteGR, 'number,title,sys_id,notes_category,notes_subcategory,notes_contact_type,state,user');
+     //get the first 20 characters of the description
+     noteObj.note = noteGR.getValue('note').slice(0,20);
+     //push the populated obj into the array
+     data.notes.push(noteObj);
+	 }
+ })();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-02 09:57:27</sys_created_on>
+        <sys_id>b0a6096f4f85f700052b33718110c7d5</sys_id>
+        <sys_mod_count>378</sys_mod_count>
+        <sys_name>Simple list with dropdown search</sys_name>
+        <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
+        <sys_update_name>sp_widget_b0a6096f4f85f700052b33718110c7d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-18 10:11:45</sys_updated_on>
+        <template><![CDATA[
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display  -->
+    <div class="row">
+  <div class="col-md-12">
+	      <div ng-dropdown-multiselect="" options="categories" selected-model="selectedCategoryModel" events="eventHandler"></div>
+  </div>
+      <div>
+</div>
+</div>
+  
+
+                                                  
+        </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+</nav>
+ 
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Data</div>
+
+  <!-- Table -->
+  <table class="table" id="myTable">
+     <tr>
+    <th>Number</th>
+    <th>Title</th> 
+    <th>Notes category</th>
+    <th>Notes Subcategory</th>
+    <th>Note</th>
+    <th>Notes Contact Type</th>
+    <th>State</th>
+    <th>User</th>
+    </tr>
+	 <tr ng-repeat="note in data.notes">
+    <td>{{note.number}}</td>
+    <td>{{note.title}}</td> 
+    <td>{{note.notes_category}}</td>
+    <td>{{note.notes_subcategory}}</td>
+    <td>{{note.note}}</td>
+    <td>{{note.notes_contact_type}}</td>
+    <td>{{note.state}}</td>
+     <td>{{note.user}}</td>
+    </tr>
+	
+ 
+  </table>
+</div>]]></template>
+    </sp_widget>
+</record_update>

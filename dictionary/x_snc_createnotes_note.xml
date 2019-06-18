@@ -1,8 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Note" max_length="40" name="x_snc_createnotes_note" type="collection">
         <element default="Enter notes here" label="Note" max_length="4000" name="note" type="string"/>
+        <element choice="1" label="Notes category" max_length="40" name="notes_category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inquiry / Help" sequence="0" value="inquiry"/>
+                <element inactive_on_update="false" label="Software" sequence="1" value="software"/>
+                <element inactive_on_update="false" label="Hardware" sequence="2" value="hardware"/>
+                <element inactive_on_update="false" label="Network" sequence="3" value="network"/>
+                <element inactive_on_update="false" label="Database" sequence="4" value="database"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Notes Contact Type" max_length="40" name="notes_contact_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Email" sequence="0" value="email"/>
+                <element inactive_on_update="false" label="Phone" sequence="1" value="phone"/>
+                <element inactive_on_update="false" label="Self Service" sequence="2" value="self_service"/>
+                <element inactive_on_update="false" label="Walk in" sequence="3" value="walk_in"/>
+            </choice>
+        </element>
+        <element choice="1" label="Notes Subcategory" max_length="40" name="notes_subcategory" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Antivirus" sequence="0" value="antivirus"/>
+                <element inactive_on_update="false" label="Email" sequence="1" value="email"/>
+                <element inactive_on_update="false" label="Internal Application" sequence="2" value="internal_application"/>
+                <element inactive_on_update="false" label="Operating System" sequence="3" value="operating_system"/>
+                <element inactive_on_update="false" label="CPU" sequence="4" value="cpu"/>
+                <element inactive_on_update="false" label="Disk" sequence="5" value="disk"/>
+                <element inactive_on_update="false" label="Keyboard" sequence="6" value="keyboard"/>
+                <element inactive_on_update="false" label="Memory" sequence="7" value="memory"/>
+                <element inactive_on_update="false" label="Monitor" sequence="8" value="monitor"/>
+                <element inactive_on_update="false" label="Mouse" sequence="9" value="mouse"/>
+                <element inactive_on_update="false" label="DHCP" sequence="10" value="dhcp"/>
+                <element inactive_on_update="false" label="DNS" sequence="11" value="dns"/>
+                <element inactive_on_update="false" label="IP Address" sequence="12" value="ip address"/>
+                <element inactive_on_update="false" label="VPN" sequence="13" value="vpn"/>
+                <element inactive_on_update="false" label="Wireless" sequence="14" value="wireless"/>
+                <element inactive_on_update="false" label="DB2" sequence="15" value="db2"/>
+                <element inactive_on_update="false" label="MS SQL Server" sequence="16" value="ms_sql_server"/>
+                <element inactive_on_update="false" label="Oracle" sequence="17" value="oracle"/>
+            </choice>
+        </element>
         <element default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Number" max_length="40" name="number" type="string" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="new" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="In Progress" sequence="1" value="in_progress"/>
+                <element inactive_on_update="false" label="On Hold" sequence="2" value="on_hold"/>
+                <element inactive_on_update="false" label="Resolved" sequence="3" value="resolved"/>
+                <element inactive_on_update="false" label="Closed" sequence="4" value="closed"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="5" value="cancelled"/>
+            </choice>
+        </element>
         <element default="New Note" label="Title" max_length="100" name="title" type="string"/>
         <element default="javascript:gs.getUserID();" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="User" max_length="32" name="user" reference="sys_user" type="reference" use_dynamic_default="true"/>
         <index name="index">

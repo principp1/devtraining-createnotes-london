@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_hp_publisher">
+    <sys_ui_hp_publisher action="INSERT_OR_UPDATE">
+        <allow_database_view_filter>false</allow_database_view_filter>
+        <allow_extended_table>false</allow_extended_table>
+        <boolean_field/>
+        <boolean_table/>
+        <date_filter/>
+        <default_boolean_field/>
+        <default_choice/>
+        <default_date_filter/>
+        <default_reference_field_value/>
+        <description/>
+        <exclusion_choice_list/>
+        <look_up_name>mutliple select filter</look_up_name>
+        <name>simple list with dropdown</name>
+        <reference_conditions/>
+        <reference_table/>
+        <source_field>notes_category</source_field>
+        <source_table>x_snc_createnotes_note</source_table>
+        <sys_class_name>sys_ui_hp_publisher</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-09 12:53:00</sys_created_on>
+        <sys_id>7af0f9b94fd17f00052b33718110c795</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>simple list with dropdown</sys_name>
+        <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
+        <sys_update_name>sys_ui_hp_publisher_7af0f9b94fd17f00052b33718110c795</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-09 12:53:00</sys_updated_on>
+        <type>1</type>
+        <ui_control_type>4</ui_control_type>
+    </sys_ui_hp_publisher>
+</record_update>

@@ -1,59 +1,100 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="eebded69090232007f44e1046c8ff693" sys_domain="global" table="x_snc_createnotes_note" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-04-10 15:59:47</sys_created_on>
-            <sys_id>680e65a9090232007f44e1046c8ff6ae</sys_id>
+            <sys_created_on>2019-05-02 09:53:22</sys_created_on>
+            <sys_id>c5b581af4f85f700052b33718110c76e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_createnotes_note" sys_domain="global" view="Default view">eebded69090232007f44e1046c8ff693</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-04-10 15:59:47</sys_updated_on>
+            <sys_updated_on>2019-05-02 09:53:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notes_category</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-02 09:53:22</sys_created_on>
+            <sys_id>49b581af4f85f700052b33718110c76e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_createnotes_note" sys_domain="global" view="Default view">eebded69090232007f44e1046c8ff693</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-02 09:53:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>notes_subcategory</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-02 09:53:22</sys_created_on>
+            <sys_id>c9b581af4f85f700052b33718110c76e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_createnotes_note" sys_domain="global" view="Default view">eebded69090232007f44e1046c8ff693</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-02 09:53:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>1</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-04-10 15:59:47</sys_created_on>
-            <sys_id>e80e65a9090232007f44e1046c8ff6ae</sys_id>
+            <sys_created_on>2019-05-02 09:53:22</sys_created_on>
+            <sys_id>4db581af4f85f700052b33718110c76e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_createnotes_note" sys_domain="global" view="Default view">eebded69090232007f44e1046c8ff693</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-04-10 15:59:47</sys_updated_on>
+            <sys_updated_on>2019-05-02 09:53:22</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>user</element>
-            <position>2</position>
+            <element>notes_contact_type</element>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-04-10 15:59:47</sys_created_on>
-            <sys_id>6c0e65a9090232007f44e1046c8ff6ae</sys_id>
+            <sys_created_on>2019-05-02 09:53:22</sys_created_on>
+            <sys_id>cdb581af4f85f700052b33718110c76e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_createnotes_note" sys_domain="global" view="Default view">eebded69090232007f44e1046c8ff693</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-04-10 15:59:47</sys_updated_on>
+            <sys_updated_on>2019-05-02 09:53:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>share</element>
-            <position>3</position>
+            <element>state</element>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2017-04-10 15:59:47</sys_created_on>
-            <sys_id>ec0e65a9090232007f44e1046c8ff6ae</sys_id>
+            <sys_created_on>2019-05-02 09:53:22</sys_created_on>
+            <sys_id>41b581af4f85f700052b33718110c76f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_snc_createnotes_note" sys_domain="global" view="Default view">eebded69090232007f44e1046c8ff693</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2017-04-10 15:59:47</sys_updated_on>
+            <sys_updated_on>2019-05-02 09:53:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-02 09:53:22</sys_created_on>
+            <sys_id>c1b581af4f85f700052b33718110c76f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_createnotes_note" sys_domain="global" view="Default view">eebded69090232007f44e1046c8ff693</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-02 09:53:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
